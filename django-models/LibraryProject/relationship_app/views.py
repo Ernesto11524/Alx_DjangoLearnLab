@@ -34,7 +34,7 @@ def register_view(request):
             return redirect("login")
     else:
         form = UserCreationForm()
-    return render(request, "registration/register.html", {"form": form})
+    return render(request, "registration_app/register.html", {"form": form})
 
 def login_view(request):
     if request.method == "POST":
@@ -50,9 +50,9 @@ def login_view(request):
         messages.error(request, "Invalid username or password")
     else:
         form = AuthenticationForm()
-    return render(request, "registration/login.html", {"form": form})
+    return render(request, "registration_app/login.html", {"form": form})
 
 def logout_view(request):
     logout(request)
     messages.info(request, "You have been logged out.")
-    return render(request, "registration/logout.html")
+    return render(request, "registration_app/logout.html")
