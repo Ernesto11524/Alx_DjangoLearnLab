@@ -3,7 +3,7 @@ from django.views.generic.detail import DetailView
 from .models import Library, Book
 
 # Create your views here.
-def viewBooks(request):
+def list_books(request):
     books = Book.objects.all()
     content = {
         'books' : books
