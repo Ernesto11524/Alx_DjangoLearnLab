@@ -22,3 +22,11 @@ class CustomUserManager(BaseUserManager):
 
     def create_superuser(self, email, username, password, date_of_birth=None, profile_photo=None):
         return None
+    
+    class Meta:
+        permissions = [
+            ('can_view', 'can_view'),
+            ('can_create', 'can_create'),
+            ('can_edit', 'can_edit'),
+            ('can_delete', 'can_delete'),
+        ]
