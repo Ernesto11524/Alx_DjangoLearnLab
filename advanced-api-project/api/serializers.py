@@ -13,7 +13,7 @@ class BookSerializer(serializers.ModelSerializer):
 # It is reposible for serializing the instances of the author instances together with the books written by them.
 
 class AuthorSerializer(serializers.ModelSerializer):
-    books = BookSerializer()
+    books = BookSerializer(many=True, read_only=True)
 
     class Meta:
         model = Author
