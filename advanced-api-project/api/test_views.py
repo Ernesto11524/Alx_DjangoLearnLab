@@ -6,3 +6,4 @@ from rest_framework import status
 
 # self, class, APITestCase
 # response.data
+# self.client.login
