@@ -19,4 +19,9 @@ class AuthorSerializer(serializers.ModelSerializer):
         model = Author
         fields = ['name', 'books',]
 
+    def validate(self, data):
+        if len(data['name']) > 50:
+            raise serializers.ValidationError("Name shouln't be more than 50 characters!")
+        return data
+
 # serializers.ValidationError
