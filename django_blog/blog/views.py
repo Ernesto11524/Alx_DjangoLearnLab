@@ -8,7 +8,7 @@ def register(request):
         form.save()
     else:
         form = CustomUserCreationForm()
-        return render(request, 'blog/registration.html', {'form' : form})
+        return render(request, 'blog/register.html', {'form' : form})
 
 def profile(request):
     form = CustomUserChangeForm()
