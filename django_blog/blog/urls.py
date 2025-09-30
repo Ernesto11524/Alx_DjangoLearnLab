@@ -14,3 +14,5 @@ urlpatterns = [
     path('post/<int:pk>/update/', UpdateView.as_view()),
     path('post/<int:pk>/delete/', DeleteView.as_view()),
 ]
+
+# ["comment/<int:pk>/update/", "post/<int:pk>/comments/new/", "comment/<int:pk>/delete/"]
