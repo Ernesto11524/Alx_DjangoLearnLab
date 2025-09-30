@@ -56,3 +56,6 @@ def updatePost(request, pk):
             form.save()
     else:
         form = Post(instance = post)
+
+# LoginRequiredMixin 
+# UserPassesTestMixin
