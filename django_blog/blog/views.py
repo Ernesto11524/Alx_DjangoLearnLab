@@ -63,3 +63,4 @@ def updatePost(request, pk):
 
 # LoginRequiredMixin 
 # UserPassesTestMixin
+# ["CommentCreateView", "CommentUpdateView", "CommentDeleteView"]
