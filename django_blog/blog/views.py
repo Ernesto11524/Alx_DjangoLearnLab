@@ -64,3 +64,4 @@ def updatePost(request, pk):
 # LoginRequiredMixin 
 # UserPassesTestMixin
 # ["CommentCreateView", "CommentUpdateView", "CommentDeleteView"]
+# "Post.objects.filter", "title__icontains", "tags__name__icontains", "content__icontains
