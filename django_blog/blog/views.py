@@ -25,18 +25,22 @@ class ListView(generics.ListAPIView):
 class DetailView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    template_name = 'blog/viewing.html'
 
 class CreateView(generics.CreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    template_name = 'blog/creating.html'
 
 class UpdateView(generics.UpdateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    template_name = 'blog/editing.html'
 
 class DeleteView(generics.DestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    template_name = 'blog/deleting.html'
 
 def createPost(request):
     if request.method == "POST":
